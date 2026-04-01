@@ -8,18 +8,6 @@ let terminalInterval;
 let popupInterval;
 
 function startSimulation() {
-    // Tenta pedir fullscreen (poderá ser bloqueado pelo browser se não houver clique)
-    const elem = document.documentElement;
-    try {
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen().catch(err => console.log("Fullscreen bloqueado", err));
-        } else if (elem.webkitRequestFullscreen) { /* Safari */
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE11 */
-            elem.msRequestFullscreen();
-        }
-    } catch(e) {}
-
     // Mostrar ecrã de hacking
     if(hackedScreen) hackedScreen.classList.remove('hidden');
 
@@ -45,14 +33,6 @@ function startSimulation() {
 
 // Iniciar automaticamente
 window.onload = startSimulation;
-
-// Tentar o fullscreen novamente se o utilizador clicar algures na página
-document.body.addEventListener('click', () => {
-    const elem = document.documentElement;
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen().catch(err => {});
-    }
-});
 
 function initMatrix() {
     const canvas = document.getElementById('matrix');
