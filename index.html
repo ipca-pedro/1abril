@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Verificação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Ecrã de "Hacked" que aparece depois -->
+    <div id="hacked-screen" class="hidden">
+        <canvas id="matrix"></canvas>
+        <div id="terminal">
+            <div id="terminal-content"></div>
+        </div>
+        <div id="popup-container"></div>
+    </div>
+
+    <!-- Ecrã Final (Educativo) -->
+    <section id="educational-screen" class="hidden" role="dialog" aria-labelledby="edu-title">
+        <div class="educational-content">
+
+            <!-- Logo -->
+            <header class="edu-header">
+                <img src="logo-63f58f59.webp" alt="Logótipo da Ergontotis" id="company-logo">
+            </header>
+
+            <!-- Título -->
+            <h2 id="edu-title">🙂 Isto foi apenas uma simulação!</h2>
+
+            <!-- Mensagem principal -->
+            <p class="intro">
+                Hoje é <strong>1 de abril</strong>, mas as ameaças digitais são bem reais.
+            </p>
+
+            <p>
+                Todos os dias, milhares de utilizadores são vítimas de <strong>phishing</strong>,
+                links maliciosos e downloads inseguros.
+            </p>
+
+            <!-- Destaque -->
+            <p class="highlight">
+                A sua segurança começa nas suas decisões.
+            </p>
+
+            <!-- Call to Action -->
+            <div class="cta">
+                <p>Este foi um alerta de sensibilização.</p>
+            </div>
+
+            <!-- Rodapé -->
+            <footer class="company-footer">
+                <p class="company-name">Ergontotis</p>
+                <p class="company-slogan">A proteger o seu mundo digital, todos os dias.</p>
+            </footer>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
